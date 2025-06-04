@@ -1,5 +1,6 @@
 <script lang="typescript">
   import Footer from "../components/Footer.svelte";
+  import FooterRes from "../components/FooterRes.svelte";
 </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -9,3 +10,5 @@
 </p>
 
 <Footer />
+
+<FooterRes />
