@@ -1,38 +1,17 @@
-# sv
+# ReScript + Svelte PoC
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This PoC adds support for `<script lang="res">` to Svelte. There are plenty of things to fix/issues that need to be addressed for this to work out well in practice, but the base building blocks work, as in you can put ReScript code in `<script lang="res">` and have it compiled properly.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
+Please refer to [rescriptPreprocess.js](support/rescriptPreprocess.js) for the actual code, and for notes about what's missing + limitations.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```bash
+npm install
+
+# Run ReScript compiler in watch mode separately. This is for the non-`.svelte` ReScript code.
+npm run res:watch
+
+# Run the regular Svelte dev process
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

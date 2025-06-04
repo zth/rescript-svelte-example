@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "res:build": "rewatch",
+    "res:watch": "rewatch watch",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
